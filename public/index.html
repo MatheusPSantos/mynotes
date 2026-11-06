@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notes</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main id="home">
+    <header><h1>Notes</h1><button id="new" class="primary">+ New note</button></header>
+    <ul id="list"></ul>
+    <p id="empty" hidden>No notes yet. Click “New note” to start.</p>
+  </main>
+
+  <main id="editor" hidden>
+    <header>
+      <button id="back">← Back</button>
+      <span id="status"></span>
+      <button id="del" class="danger">Delete</button>
+    </header>
+    <input id="title" type="text" placeholder="Title (optional)">
+    <textarea id="text" placeholder="Write anything…" autofocus></textarea>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

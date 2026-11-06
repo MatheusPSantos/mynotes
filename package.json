@@ -1,0 +1,41 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "Simple note-taking app",
+  "main": "main.js",
+  "scripts": {
+    "start": "node server.js",
+    "desktop": "electron .",
+    "dist": "electron-builder"
+  },
+  "license": "MIT",
+  "author": "Notes",
+  "build": {
+    "appId": "com.example.notes",
+    "productName": "Notes",
+    "files": [
+      "main.js",
+      "server.js",
+      "public/**/*"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Office",
+      "maintainer": "Notes <notes@example.com>"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  },
+  "devDependencies": {
+    "electron": "^45.2.2",
+    "electron-builder": "^26.18.0"
+  },
+  "homepage": "https://example.com/notes"
+}
